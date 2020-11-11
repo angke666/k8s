@@ -50,6 +50,10 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
 
+<!-- 遇到两个问题： -->
+<!-- 1.打包过程中无法连接localhost:2375，在本地docker设置界面里面勾选开启2375字样那个选项。 -->
+<!-- 2.无法推送至阿里云私有仓库，在maven里面配置了账号密码信息也无法推送。-->
+<!-- （那是因为之前在本地用doker login命令已经登录过了。解决办法就是把.docker文件夹里面的config.json文件删掉即可） -->
             <plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
